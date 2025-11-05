@@ -1,0 +1,50 @@
+🖥️ Amazon EC2 (Elastic Compute Cloud)
+
+Definition:
+Amazon Elastic Compute Cloud (EC2) is a core AWS (Amazon Web Services) service that provides resizable compute capacity in the cloud. In simple terms, it lets you run virtual servers — called EC2 instances — to host applications, websites, or workloads without managing physical hardware.
+
+🚀 Key Features
+
+Scalability:
+Quickly increase or decrease the number or size of instances based on demand.
+
+Pay-as-you-go:
+You pay only for the compute time you use — no upfront costs.
+
+Multiple Instance Types:
+Choose from general-purpose, compute-optimised, memory-optimised, or GPU instances depending on your workload.
+
+Elastic Load Balancing (ELB):
+Distributes incoming traffic across multiple EC2 instances for high availability.
+
+Auto Scaling:
+Automatically adjusts the number of instances to handle traffic changes.
+
+Security:
+Integrated with AWS Identity and Access Management (IAM), Security Groups, and VPC for controlled access.
+
+🧩 Common Use Cases
+
+Hosting web applications or APIs
+
+Running backend services or microservices
+
+Machine learning model training/inference
+
+Batch processing or data analysis
+
+Development and test environments
+
+💡 Example
+
+Let’s say you want to host a website:
+
+You launch an EC2 instance (a virtual server).
+
+Install Apache or Nginx on it.
+
+Deploy the website’s code.
+
+Attach an Elastic IP and security group.
+
+The website is now accessible on the internet!
