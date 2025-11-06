@@ -1,0 +1,89 @@
+⚙️ What is AWS Lambda?
+
+AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers.
+You just upload your function code, and AWS takes care of scaling, availability, and infrastructure automatically.
+
+Lambda runs your code only when triggered, and you pay only for the compute time your code uses — no charge when it’s idle.
+
+💡 How It Works
+
+Write your code (in Python, Node.js, Java, C#, Go, etc.).
+
+Upload it to AWS Lambda.
+
+Set a trigger — for example:
+
+
+An API call (via API Gateway)
+
+A file upload in S3
+
+A message from SNS/SQS
+
+A schedule (using CloudWatch Events)
+
+Lambda automatically runs your code and scales based on the number of incoming requests.
+
+🔄 Example Scenario
+
+Use Case: Automatically process uploaded images.
+
+A user uploads an image to Amazon S3.
+
+This event triggers a Lambda function.
+
+The Lambda function runs Python code that:
+
+Resizes the image,
+
+Stores the resized image in another S3 bucket,
+
+Updates a database or sends a notification.
+
+No servers, no manual scaling — just event-driven automation. ✅
+
+🧩 Key Features
+Feature	Description
+Serverless: No servers to manage — AWS handles all infrastructure.
+Event-Driven: Automatically runs in response to events (S3, API Gateway, DynamoDB, etc.).
+Auto Scaling	Scales automatically with the number of events.
+Multi-language Support: Python, Node.js, Java, Go, Ruby, C#, PowerShell.
+Pay-per-Use	Billed by execution time (per ms) and number of requests.
+Integrated with AWS Services,works seamlessly with S3, SNS, SQS, DynamoDB, API Gateway, CloudWatch, etc.
+💰 Pricing
+
+You pay for:
+
+Number of requests (free up to 1 million/month)
+
+Execution duration (charged per GB-second of compute time)
+
+🧠 Common Use Cases
+
+Serverless APIs using API Gateway + Lambda
+
+Real-time file processing (S3 trigger)
+
+Automation scripts and cron jobs
+
+Event-driven workflows
+
+Chatbots and backend microservices
+
+📝 Simple Python Example
+def lambda_handler(event, context):
+    name = event.get('name', 'World')
+    return {
+        'statusCode': 200,
+        'body': f'Hello, {name}!'
+    }
+
+
+If you invoke this Lambda function with the input:
+
+{ "name": "Ruchi" }
+
+
+It returns:
+
+{ "statusCode": 200, "body": "Hello, Ruchi!" }
